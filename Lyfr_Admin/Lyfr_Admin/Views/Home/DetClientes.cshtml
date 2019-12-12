@@ -1,0 +1,70 @@
+﻿@model Lyfr_Admin.Models.Entities.Cliente
+@{
+    ViewData["Title"] = "Detalhes "+@Model.Nome;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container container-black">
+    <div class="info-clientes nome-cliente">
+        <h2>@Model.Nome</h2>
+    </div>
+    <div class="info-clientes dados-cliente">
+        <div class="div-info">
+            <h5>CPF: @Model.Cpf</h5>
+            <h5>Email: @Model.Email</h5>
+        </div>
+    </div>
+    <div class="info-clientes livros-cliente">
+        <div class="table-responsive-lg div-table div-table-style">
+            <h3 class="title-table">Livros já lidos</h3>
+            <table class="table table-striped table-dark table-bordered table-style">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Editora</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Quant de Leitura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>Livro 1</td>
+                        <td>Editora 2</td>
+                        <td>Autor 3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>Livro 1</td>
+                        <td>Editora 2</td>
+                        <td>Autor 3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>Livro 1</td>
+                        <td>Editora 2</td>
+                        <td>Autor 3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">16</th>
+                        <td>Livro 1</td>
+                        <td>Editora 2</td>
+                        <td>Autor 3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>Livro 1</td>
+                        <td>Editora 2</td>
+                        <td>Autor 3</td>
+                        <td>4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

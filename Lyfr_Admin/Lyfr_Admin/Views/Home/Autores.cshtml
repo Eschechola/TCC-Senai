@@ -1,0 +1,100 @@
+﻿@model List<Lyfr_Admin.Models.Entities.Autores>
+
+@{
+    ViewData["Title"] = "Autores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    
+    <div class="background-display-order" onclick="Dropdown()"></div>
+    <div class="black-background-painel">
+        <center>
+            <div class="itens-load">
+                <div class="load">
+                </div>
+                <br>
+                <p id="loadingDots">Carregando requisição...</p>
+            </div>
+        </center>
+    </div>
+    <div class="container">
+        <div class="div-title-mobile">
+            <h2 class="title-table">Autores</h2>
+        </div>
+
+        <div class="menu-options">
+            <div class="btn-style btn-adicionar" onclick="document.location.href='/Home/AdicionarAutor'">
+                <p>Adicionar</p>
+            </div>
+        </div>
+
+        <div class="table-options options-editable">
+
+            <div class="options-list div-form-pesquisar">
+                <form asp-controller="Home" asp-action="Autores" method="post" id="form-pesquisar" name="form-pesquisar">
+                    <input type="text" placeholder="Pesquisar autores..." name="Nome" id="Pesquisa" />
+                    <img src="~/img/search.png" id="Enviar" />
+                </form>
+            </div>
+            <div class="options-list div-title">
+                <h2 class="title-table">Autores</h2>
+            </div>
+            <div class="options-list order-content">
+                <div class="order-div">
+                    <h4>Ordenar por: </h4>
+                    <div class="order-items" onclick="Dropdown()">
+                        <p>@ViewBag.Ordenacao</p>
+                    </div>
+                    <div class="items-dropdown">
+                        <br>
+                        <p class="item-menu-p" onclick="window.location.href = '/Home/Autores/?idOrdenacao=0'; ShowLoad()">Crescente</p>
+                        <p class="item-menu-p" onclick="window.location.href = '/Home/Autores/?idOrdenacao=1'; ShowLoad()">Decrescente</p>
+                        <p class="item-menu-p" onclick="window.location.href = '/Home/Autores/?idOrdenacao=2'; ShowLoad()">Nome</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive-md div-table div-table-style">
+            <table class="table table-striped table-livros table-hover table-dark table-bordered table-style">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Ano de Nascimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        if (Model.Count > 0)
+                        {
+                            for (int i = 0; i < Model.Count; i++)
+                            {
+                                <tr onclick="window.location.href='/Home/DetAutor/?nome=@Model[i].Nome'">
+                                    <th scope="row">@Model[i].IdAutor</th>
+                                    <td onclick="window.open('@Model[i].Foto'"><img src="@Model[i].Foto" id="cover-book" /></td>
+                                    <td>@Model[i].Nome</td>
+                                    <td>@Model[i].AnoNasc</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4">Nenhum autor cadastrado ainda.</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">Erro ao se comunicar com a base de dados.</td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+

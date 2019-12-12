@@ -1,0 +1,86 @@
+﻿@model Lyfr.Models.Cliente
+@{
+    ViewData["Title"] = "Cadastro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid background">
+    <div class="container fundo-inicial">
+        <div class="row">
+            <div class="col-md-7 col-12">
+                <div class="form_side">
+                    <form action="/Home/Cadastro" method="post">
+                        <h2 class="TituloPage"> Para se cadastrar, preencha os campos abaixo: </h2>
+                        <br />
+                        <div class="row row-form">
+                            <div class="col-90">
+                                <br />
+                                <input class="input-style" type="text" id="Nome" name="Nome" placeholder="Nome Completo" value="@(ViewBag.Cliente == null ? "" : ViewBag.Cliente.Nome)" />
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+                            <div class="col-90 ">
+                                <br />
+                                <input class="input-style" type="text" id="Email" name="Email" placeholder="Endereço de E-mail" value="@(ViewBag.Cliente == null ? "" : ViewBag.Cliente.Email)" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-90">
+                                <br />
+                                <input class="input-style" type="text" id="Cpf" name="Cpf" placeholder="CPF" value="@(ViewBag.Cliente == null ? "" : ViewBag.Cliente.Cpf)" />
+                                <span asp-validation-for="Cpf" class="text-danger"></span>
+                            </div>
+                            <div class="col-90">
+                                <br />
+                                <input class="input-style" type="password" id="Senha" name="Senha" placeholder="Senha" value="@(ViewBag.Cliente == null ? "" : ViewBag.Cliente.Senha)" />
+                                <span asp-validation-for="Senha" class="text-danger"></span>
+                            </div>
+                            <div class="col-90">
+                                <br />
+                                <input class="input-style" type="password" id="ConfSenha" name="ConfSenha" placeholder="Confirme sua Senha" value="@(ViewBag.Cliente == null ? "" : ViewBag.Cliente.ConfSenha)" />
+                                <span asp-validation-for="ConfSenha" class="text-danger"></span>
+                            </div>
+                        </div>
+
+
+
+                        @*<h2 class="title-plano"> Informe o plano escolhido: </h2>
+
+                        <div class="div-plano">
+                                <input type="radio" name="plano" value="grátis" class="entry_radio">
+                                <p class="plano-p">Grátis</p>
+
+                                <input type="radio" name="plano" value="premium" class="entry_radio" id="btn-pago">
+                                <p class="plano-p">Premium</p>
+                        </div>*@
+
+                        <input type="submit" class="entry_submit" value="Cadastrar" />
+                        <br />
+                        @if (ViewBag.Erro != null)
+                        {
+                            <div class="alert alert-danger" role="alert" style="margin:10px;">
+                                @ViewBag.Erro
+                            </div>
+                        }
+
+                        @if (ViewBag.Sucesso != null)
+                        {
+                            <div class="alert alert-success" role="alert" style="margin:10px;">
+                                @ViewBag.Sucesso
+                            </div>
+                        }
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-5 col-12">
+                <div class="image_side">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $("#Cpf").mask("000.000.000-00");
+</script>

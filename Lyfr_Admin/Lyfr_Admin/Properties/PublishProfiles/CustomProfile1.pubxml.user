@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAh8s6Ke05U26vL4ueWzzogAAAAACAAAAAAAQZgAAAAEAACAAAABaKZX21RxkYP3CQ9ESqZ2DBeYj1jqtYxIodL/Glh4aFQAAAAAOgAAAAAIAACAAAABgEgZqVjmvBOzNRi7hYZ7KmLTolAzEFIyr82/lMzOI7iAAAAD4TECPIlCHSgq6oX7ATYzAhfqe43T3hUSyQIrrwNgS00AAAABzlfIlCXKE48AdNsCy0C1QxeBKxGvyMOjh/hyanNkuPIytqQi6TGkdli9YXqsYG5FEuD4THnibw7g6BMTqipJj</EncryptedPassword>
+    <_PublishTargetUrl>ftp://marte.hostingzone.com.br/wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>03/02/2019 19:52:30</publishTime>
+    </File>
+    <File Include="libman.json">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.deps.json">
+      <publishTime>10/07/2019 21:05:42</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.dll">
+      <publishTime>10/07/2019 21:05:24</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.Models.dll">
+      <publishTime>10/07/2019 21:05:17</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.Models.pdb">
+      <publishTime>10/07/2019 21:05:17</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.pdb">
+      <publishTime>10/07/2019 21:05:24</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.Requests.dll">
+      <publishTime>10/07/2019 21:05:20</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.Requests.pdb">
+      <publishTime>10/07/2019 21:05:20</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.runtimeconfig.json">
+      <publishTime>10/07/2019 21:05:28</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.Views.dll">
+      <publishTime>10/07/2019 21:05:28</publishTime>
+    </File>
+    <File Include="Lyfr_Admin.Views.pdb">
+      <publishTime>10/07/2019 21:05:28</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>09/11/2019 20:30:16</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>09/11/2019 20:30:26</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
+      <publishTime>03/02/2019 19:51:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+      <publishTime>03/02/2019 19:52:00</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
+      <publishTime>03/02/2019 19:52:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+      <publishTime>03/02/2019 19:52:02</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>03/02/2019 19:51:58</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>03/02/2019 19:51:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+      <publishTime>03/02/2019 19:52:04</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>04/22/2019 01:06:16</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>09/11/2019 20:29:44</publishTime>
+    </File>
+    <File Include="System.Composition.AttributedModel.dll">
+      <publishTime>09/11/2019 20:29:54</publishTime>
+    </File>
+    <File Include="System.Composition.Convention.dll">
+      <publishTime>09/11/2019 20:29:54</publishTime>
+    </File>
+    <File Include="System.Composition.Hosting.dll">
+      <publishTime>09/11/2019 20:29:59</publishTime>
+    </File>
+    <File Include="System.Composition.Runtime.dll">
+      <publishTime>09/11/2019 20:29:59</publishTime>
+    </File>
+    <File Include="System.Composition.TypedParts.dll">
+      <publishTime>09/11/2019 20:29:59</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>10/07/2019 21:05:42</publishTime>
+    </File>
+    <File Include="wwwroot/css/footer.css">
+      <publishTime>09/30/2019 20:50:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/login.css">
+      <publishTime>09/30/2019 20:50:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/menu.css">
+      <publishTime>09/30/2019 20:50:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/painel.css">
+      <publishTime>10/07/2019 21:02:41</publishTime>
+    </File>
+    <File Include="wwwroot/img/back.png">
+      <publishTime>08/14/2019 18:20:42</publishTime>
+    </File>
+    <File Include="wwwroot/img/bg-login.PNG">
+      <publishTime>09/30/2019 20:50:03</publishTime>
+    </File>
+    <File Include="wwwroot/img/BookCover.png">
+      <publishTime>08/29/2019 10:08:29</publishTime>
+    </File>
+    <File Include="wwwroot/img/everaldo.jpg">
+      <publishTime>09/05/2019 07:04:04</publishTime>
+    </File>
+    <File Include="wwwroot/img/fundo-login.jpg">
+      <publishTime>09/30/2019 20:50:03</publishTime>
+    </File>
+    <File Include="wwwroot/img/Icon_Lyfr.png">
+      <publishTime>08/13/2019 18:27:40</publishTime>
+    </File>
+    <File Include="wwwroot/img/Logo_Lyfr.png">
+      <publishTime>08/13/2019 18:16:51</publishTime>
+    </File>
+    <File Include="wwwroot/img/search.png">
+      <publishTime>08/29/2019 08:34:29</publishTime>
+    </File>
+    <File Include="wwwroot/img/sort-by-attributes.png">
+      <publishTime>08/29/2019 08:08:51</publishTime>
+    </File>
+    <File Include="wwwroot/img/starry_sky_clouds_sunset_120716_1920x1080.jpg">
+      <publishTime>08/29/2019 08:28:26</publishTime>
+    </File>
+    <File Include="wwwroot/img/user.png">
+      <publishTime>09/13/2019 09:14:09</publishTime>
+    </File>
+    <File Include="wwwroot/js/scripts.js">
+      <publishTime>09/30/2019 20:50:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/core.js">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/jquery.js">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/jquery.min.js">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/jquery.min.map">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/jquery.slim.js">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/jquery.slim.min.js">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/jquery.slim.min.map">
+      <publishTime>08/20/2019 22:53:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>08/13/2019 09:18:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

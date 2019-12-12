@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Generos";
+    Layout = "~/Views/Shared/_Layout_Browse.cshtml";
+}
+
+    <div class="container-fluid fundo-browse">
+        <div class="padding-top">
+            <div class="row">
+                @if (ViewBag.ListaGeneros.Count > 0)
+                {
+                    @foreach (var item in ViewBag.ListaGeneros)
+                    {
+                        <div class="col-12 col-md-4 col-lg-3 col-generos" style="background-image: url('@item.Foto');" onclick="document.location.href = '/Home/Genero/@item.Nome'">
+                            <h3>@item.Nome</h3>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <h1 class="text-center big-padding-top big-padding-bottom text-white margin-0">Não há livros nessa categoria!</h1>
+                }
+
+                @if (ViewBag.Erro != null)
+                {
+                    <h1 class="text-center big-padding-top big-padding-bottom text-white margin-0">@ViewBag.Erro</h1>
+                }
+
+                @if (ViewBag.ErroLivros != null)
+                {
+                    <h1 class="text-center big-padding-top big-padding-bottom text-white margin-0">@ViewBag.ErroLivros</h1>
+                }
+
+
+            </div>
+        </div>
+    </div>

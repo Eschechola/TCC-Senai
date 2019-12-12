@@ -1,0 +1,136 @@
+﻿@model  List<Lyfr_Admin.Models.Entities.Editora>
+
+@{
+    ViewData["Title"] = "Editoras";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="background-display-order" onclick="Dropdown()"></div>
+    <div class="black-background-painel">
+        <center>
+            <div class="itens-load">
+                <div class="load">
+                </div>
+                <br>
+                <p id="loadingDots">Carregando requisição...</p>
+            </div>
+        </center>
+    </div>
+    <div class="container">
+        <div class="div-title-mobile">
+            <h2 class="title-table">Editoras</h2>
+        </div>
+
+        <div class="menu-options">
+            <div class="btn-style btn-adicionar" onclick="document.location.href='/Home/AdicionarEditora'">
+                <p>Adicionar</p>
+            </div>
+        </div>
+
+        <div class="table-options options-editable">
+
+            <div class="options-list div-form-pesquisar">
+                <form asp-controller="Home" asp-action="Editoras" method="post" id="form-pesquisar" name="form-pesquisar">
+                    <input type="text" placeholder="Pesquisar editoras..." name="Nome" id="Pesquisa" />
+                    <img src="~/img/search.png" id="Enviar" />
+                </form>
+            </div>
+            <div class="options-list div-title">
+                <h2 class="title-table">Editoras</h2>
+            </div>
+            <div class="options-list order-content">
+                <div class="order-div">
+                    <h4>Ordenar por: </h4>
+                    <div class="order-items" onclick="Dropdown()">
+                        <p>@ViewBag.Ordenacao</p>
+                    </div>
+                    <div class="items-dropdown">
+                        <br>
+                        <p class="item-menu-p" onclick="window.location.href = '/Home/Editoras/?idOrdenacao=0'; ShowLoad()">Crescente</p>
+                        <p class="item-menu-p" onclick="window.location.href = '/Home/Editoras/?idOrdenacao=1'; ShowLoad()">Decrescente</p>
+                        <p class="item-menu-p" onclick="window.location.href = '/Home/Editoras/?idOrdenacao=2'; ShowLoad()">Nome</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive-md div-table div-table-style">
+            <table class="table table-striped table-livros table-hover table-dark table-bordered table-style">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        if (Model.Count > 0)
+                        {
+                            for (int i = 0; i < Model.Count; i++)
+                            {
+                                <tr>
+                                    <th scope="row">@Model[i].IdEditora</th>
+                                    <td>@Model[i].Nome</td>
+                                    <td>
+                                        <center>
+                                            <button class="btn-style btn-delete" id="btn-delete" type="button" data-toggle="modal" data-target="#modalAutor" onclick="AtribuirEditora('@Model[i].Nome')">Excluir</button>
+                                        </center>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3">Nenhuma editora cadastrada!</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3">Não foi possível se comunicar com a base de dados!</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalAutor" tabindex="-1" role="dialog" aria-labelledby="modalAutorTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAutorTitle">Deletar uma editora?</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-11 ml-2">
+                                <br>
+                                <br>
+                                <p>Deseja realmente deletar a Editora<br> <span id="nomeEditora"></span> </p>
+                                <br />
+                                <center>
+                                    <button class="btn btn-success btn-modal-up" onclick="DeletarEditoraAJAX(); ShowLoad();">SIM</button>
+                                    <button class="btn btn-danger btn-modal-up" data-dismiss="modal">NÃO</button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="msgRequestContent">
+                        <center>
+                            <h4 id="msgRequest">
+                                
+                            </h4>
+                            <br />
+                            <button class="btn btn-primary" onclick="window.location.href = '/Home/Editoras'; ShowLoad();">RECARREGAR LISTA</button>
+                        </center>
+                    </div>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+

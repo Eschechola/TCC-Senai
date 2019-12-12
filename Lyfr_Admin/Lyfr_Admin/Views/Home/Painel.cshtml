@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="black-background-painel">
+        <center>
+            <div class="itens-load">
+                <div class="load">
+                </div>
+                <br>
+                <p id="loadingDots">Carregando requisição...</p>
+            </div>
+        </center>
+    </div>
+    <div class="list-tables">
+        <h1>Seja bem - vindo ao dashboard da plataforma Lyfr</h1>
+        <br>
+        <p id="data">00/00/0000</p>
+        <p id="hora">00:00:00</p>
+
+        <div class="button-pages" id="button-off"></div>
+
+        <div class="button-pages" onclick="document.location.href = '/Home/Clientes'; ShowLoad()">
+            <p>Clientes</p>
+        </div>
+
+        <div class="button-pages" id="button-off"></div>
+
+        <div class="button-pages" id="button-off"></div>
+
+        <div class="button-pages" onclick="document.location.href = '/Home/Livros'; ShowLoad()">
+            <p>Livros</p>
+        </div>
+
+        <div class="button-pages" id="button-off"></div>
+
+        <div class="button-pages" id="button-off"></div>
+
+        <div class="button-pages" onclick="document.location.href = '/Home/Autores'; ShowLoad()">
+            <p>Autores</p>
+        </div>
+
+        <div class="button-pages" id="button-off"></div>
+
+        <div class="button-pages" id="button-off"></div>
+
+        <div class="button-pages" onclick="document.location.href = '/Home/Editoras'; ShowLoad()">
+            <p>Editoras</p>
+        </div>
+
+        <div class="button-pages" id="button-off"></div>
+    </div>
+
+
+    

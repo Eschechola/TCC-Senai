@@ -1,0 +1,80 @@
+﻿@model Lyfr_Admin.Models.Entities.Livros
+@{
+    ViewData["Title"] = "DetLivros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container container-black">
+        @if (Model != null)
+        {
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2 class="title-livro">@Model.Titulo</h2>
+                    <img src="@Model.Capa" class="cover-book" />
+                </div>
+                <div class="col-12 col-lg-6 dados-cliente">
+                    <div class="btn-style btn-center btn-delete" id="btn-delete" data-toggle="modal" data-target="#modalLivro" onclick="AtribuirLivro('@Model.Titulo')">
+                        <p>Excluir</p>
+                    </div>
+                    <div class="btn-style btn-center btn-alter" onclick="document.location.href='/Home/AlterarLivros/@Model.Titulo'">
+                        <p>Alterar</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 dados-livros">
+                    <h4>Dados técnicos:</h4>
+                    <br />
+                    <h5>Autor: @Model.Autor.Nome</h5>
+                    <h5>Editora: @Model.Editora.Nome</h5>
+                    <h5>Gênero: @Model.Genero</h5>
+                    <h5>Ano de lançamento: @Model.Ano_Lanc</h5>
+                    <h5>ISBN: @Model.Isbn</h5>
+                    <br />
+                    <h5>Sinopse: </h5>
+                    <p>@Model.Sinopse</p>
+                </div>
+                <div class="col-12 col-lg-6 other-dados-livros">
+                    <br />
+                    <h5>Total de leituras </h5>
+                    <h5> 2 </h5>
+                    <br />
+                </div>
+            </div>
+        }
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalLivro" tabindex="-1" role="dialog" aria-labelledby="modalLivroTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLivroTitle">Deletar um livro?</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-11 ml-2">
+                                <br>
+                                <br>
+                                <p>Deseja realmente deletar o Livro<br> <span id="nomeLivro"></span> </p>
+                                <br />
+                                <center>
+                                    <button class="btn btn-success btn-modal-up" onclick="DeletarLivroAJAX(); ShowLoad();">SIM</button>
+                                    <button class="btn btn-danger btn-modal-up" data-dismiss="modal">NÃO</button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="msgRequestContent">
+                        <center>
+                            <h4 id="msgRequest">
+                            </h4>
+                            <br />
+                            <button class="btn btn-primary" onclick="window.location.href = '/Home/Livros'; ShowLoad();">RECARREGAR LISTA</button>
+                        </center>
+                    </div>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

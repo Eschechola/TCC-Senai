@@ -1,0 +1,402 @@
+﻿body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    overflow-x: hidden;
+    font-family: 'Merriweather', serif;
+}
+
+* {
+    font-family: Ubuntu;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #495059;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #495059;
+}
+
+::-webkit-scrollbar { 
+
+}
+
+::-webkit-scrollbar-button { 
+
+}
+
+::-webkit-scrollbar-track { 
+
+}
+
+::-webkit-scrollbar-track-piece {
+  
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #495059;
+    border-radius:25px;
+}
+
+::-webkit-scrollbar-corner { 
+
+}
+
+::-webkit-resizer { 
+
+}
+
+.error-code{
+    color: #fff;
+    opacity: 0.9;
+    font-size: 1.2vw;
+}
+
+.result {
+    color: #fff;
+    font-size: 1.2vw;
+    text-align: center;
+    margin-top: 2%;
+    opacity: 0.8;
+}
+
+.container-background {
+    width: 100vw;
+    height: 1080px;
+    background-color: #495059;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: grayscale(60%);
+    position: relative;
+    overflow: auto;
+    background-size: 100% 100%;
+    background-image: url(../img/starry_sky_clouds_sunset_120716_1920x1080.jpg);
+}
+
+.container-login-white {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    background-color: #343A3F;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 85%;
+    border-radius: 4px;
+    height: 81%;
+    margin-top: 5vh;
+    float: left;
+}
+
+.image-login {
+    width: 50%;
+    float: left;
+    height: 873px;
+    border-radius: 4px;
+    margin-top: -3.3%;
+    background-color: red;
+    background-image: url(../img/fundo-login.jpg);
+    filter: grayscale(100%);
+}
+
+.content-login {
+    position: relative;
+    width: 50%;
+    height: 90vh;
+    float: right;
+    margin-top: -3.3%;
+}
+
+.login-inputs{
+    width: 70%;
+    height: 100%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 65%;
+}
+
+.login-inputs h3{
+    width: 100%;
+    margin-top: 2% !important;
+    color: #e3e3e3;
+    text-align: center;
+}
+
+form{
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 70%;
+    margin-top: 3%;
+}
+
+input {
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #495059;
+    outline: 0;
+    color: #e3e3e3;
+    font-size: 18px;
+}
+
+label {
+    margin-top: 70px;
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: #e3e3e3;
+    font-size: 18px;
+}
+
+button {
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    background-color: #007475;
+    padding: 12px;
+    border-radius: 4px;
+    color: #e3e3e3;
+    margin-top: 90px;
+    outline: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #125b5c;
+    transition: 0.5s;
+}
+
+button:active {
+    outline: 0;
+}
+
+button:hover{
+    outline: 0;
+}
+
+#esqueci-senha {
+    color: #a6aaad;
+    margin-top: 0px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    cursor: pointer;
+    background-color: transparent !important;
+    outline: 0;
+}
+
+#esqueci-senha:hover {
+    text-decoration: underline;
+}
+
+#msgErro {
+    color: rgba(255,255,255,0.8);
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    cursor: pointer;
+}
+
+hr {
+    color: white;
+    border-color: white;
+    background-color: #e3e3e3;
+}
+
+.error-message {
+    width: 0px;
+    border-radius: 0px 4px 4px 0px;
+    height: 50px;
+    background-color: #007475;
+    float: left;
+    margin-left: 50%;
+    margin-top: 5%;
+    z-index: 20;
+    position: fixed;
+    transition: 0.7s;
+    color: white;
+}
+
+.error-message p{
+    margin-top: 10px;
+    position: relative;
+    opacity: 0;
+    transition: 2s;
+    font-size: 18px;
+}
+
+.modal{
+    overflow-x: hidden !important;
+}
+
+.modal-dialog {
+    height: 400px !important;
+    overflow-x: hidden !important;
+}
+
+.modal-content {
+    background-color: #343A3F !important;
+    overflow-x: hidden !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid #495059;
+    overflow-x: hidden !important;
+}
+
+.modal-header{
+    color: rgba(255,255,255,0.9);
+}
+
+.modal-body {
+    overflow-x: hidden !important;
+}
+
+.modal-body p {
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    font-size: 20px;
+}
+
+#formEsqueceuSenha {
+    margin: 0;
+    transform: translateX(10%);
+    position: relative !important;
+}
+
+#inputEsqueceuSenha {
+    font-size: 18px !important;
+}
+
+#buttonEsqueceuSenha{
+    margin-top: 9.9%;
+
+}
+
+@media only screen and (max-width: 1600px) {
+    .container-login-white{
+        width: 80%;
+        height: 80%;
+        margin-top: 2.5%;
+    }
+
+    .container-background {
+        height: 730px;
+    }
+
+    .login-inputs{
+        margin-top: 55%;
+        height: 100%;
+    }
+
+    .login-inputs h3{
+        margin-top: 10% !important;
+        width: 90%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+    }
+
+    label{
+        margin-top: 10%;
+        font-size: 16px;
+    }
+
+    input {
+        margin-top: -1%;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        margin-top: 20%;
+        padding: 8px;
+    }
+
+    .image-login{
+        background-size: 160% 160%;
+        margin-top: -10%;
+    }
+
+    #esqueci-senha{
+        transform: translate(-50%, -120%);
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .container-background {
+        height: 200vh;
+    }
+
+    .image-login{
+        width: 0 !important;
+    }
+
+    .container-login-white{
+        margin-top: 5%;
+        width: 90vw;
+        height: 95vh;
+    }
+
+    .login-inputs{
+        margin-top: 90vw;
+    }
+
+    form{
+        width: 120%;
+        margin-left: 50% !important;
+        height: 70%;
+        margin-top: 0;
+    }
+
+    .content-login{
+        width: 100%;
+    }
+
+    label{
+        margin-top: 15% !important;
+        font-size: 13px;
+    }
+
+    input {
+        font-size: 13px;
+    }
+
+    .error-message{
+        margin-top: 92vh;
+        margin-left: 0;
+    }
+
+    .login-inputs h3{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    #esqueci-senha{
+        margin-top: -20%;
+    }
+
+    #formEsqueceuSenha{
+        transform: translateX(-50%) !important;
+    }
+
+    .itens-load{
+        margin-top: 80% !important;
+        margin-left: -15% !important;
+    }
+}

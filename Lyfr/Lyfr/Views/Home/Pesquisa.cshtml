@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Pesquisa";
+    Layout = "~/Views/Shared/_Layout_Browse.cshtml";
+}
+<div class="fundo-browse">
+    <div class="container-apresentation pesquisa-image">
+        <h2 class="title-livro-destaque">"@ViewBag.Nome"</h2>
+    </div>
+    <div class="container-fluid container-categ container-flex">
+        @if (ViewBag.Erro != null)
+        {
+            <h1 class="text-center big-padding-top big-padding-bottom text-white margin-0">@ViewBag.Erro</h1>
+        }
+
+        else
+        {
+            @foreach (var item in ViewBag.Pesquisa)
+            {
+                <div class="box-livro box-livro-responsive" value="@(item.Titulo)" style="background-image: url('@item.Capa')"></div>
+            }
+
+        }
+
+    </div>
+</div>
+

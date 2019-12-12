@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>45a1f730-01d1-4bed-906b-164c353c2cb7</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <!--linha de codigo para carregar o .net core no servidor-->
+    <AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LyfrAPI.Aplicacoes\LyfrAPI.Aplicacoes.csproj" />
+    <ProjectReference Include="..\LyfrAPI.Encryption\LyfrAPI.Encryption.csproj" />
+    <ProjectReference Include="..\LyfrAPI.Models\LyfrAPI.Models.csproj" />
+    <ProjectReference Include="..\LyfrAPI.Validations\LyfrAPI.Validations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Email\Templates\Welcome\images\1.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\2.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\3.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\facebook@2x.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\fundo1.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\Icon_Lyfr3.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\instagram@2x.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\linkedin@2x.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\images\twitter@2x.png" />
+    <None Include="wwwroot\Email\Templates\Welcome\Welcome.html" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_15_26_43.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_15_27_50.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_16_19_54.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_16_27_27.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_16_37_26.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_16_46_12.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_16_56_21.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_17_01_29.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book02_12_2019_17_09_40.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book04_12_2019_14_34_43.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book04_12_2019_15_00_47.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book04_12_2019_15_16_52.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book04_12_2019_15_20_59.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book05_12_2019_15_29_12.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book06_12_2019_14_07_32.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book06_12_2019_14_09_50.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book06_12_2019_14_14_03.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book06_12_2019_14_26_04.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book22_10_2019_16_04_42.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book23_10_2019_16_36_54.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book23_10_2019_16_51_31.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book24_10_2019_16_20_53.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book24_10_2019_16_35_19.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book24_10_2019_16_50_08.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book24_10_2019_17_15_39.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book27_11_2019_16_39_33.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book27_11_2019_16_59_09.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book27_11_2019_17_30_36.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book29_11_2019_16_57_02.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book31_10_2019_15_17_22.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book31_10_2019_16_41_41.epub" />
+    <None Include="wwwroot\Livros\Epubs\lyfr_book31_10_2019_16_49_27.epub" />
+  </ItemGroup>
+  
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

@@ -1,0 +1,90 @@
+﻿@model Lyfr_Admin.Models.Entities.Livros
+
+@{
+    ViewData["Title"] = "AdicionarLivros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="black-background-painel">
+        <center>
+            <div class="itens-load">
+                <div class="load">
+                </div>
+                <br>
+                <p id="loadingDots">Carregando requisição...</p>
+            </div>
+        </center>
+    </div>
+    <div class="container container-black">
+        <form asp-action="AdicionarLivros" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="form-group col-lg-9 col-md-12">
+                    <label asp-for="Titulo" class="control-label"></label>
+                    <input asp-for="Titulo" class="form-control" />
+                    <span asp-validation-for="Titulo" class="text-danger"></span>
+                </div>
+                <div class="form-group col-lg-3 col-md-12">
+                    <label asp-for="Ano_Lanc" class="control-label"></label>
+                    <input asp-for="Ano_Lanc" class="form-control" />
+                    <span asp-validation-for="Ano_Lanc" class="text-danger"></span>
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                    <label asp-for="Autor" class="control-label"></label>
+                    <select name="FkAutor" class="form-control">
+                        @foreach (var item in ViewBag.Autores)
+                        {
+                            <option value="@item.IdAutor">@item.Nome</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                    <label asp-for="Editora" class="control-label"></label>
+                    <select name="FkEditora" class="form-control">
+                        @foreach (var item in ViewBag.Editoras)
+                        {
+                            <option value="@item.IdEditora">@item.Nome</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group col-lg-4 col-md-12">
+                    <label asp-for="Genero" class="control-label"></label>
+                    <select name="Genero" class="form-control">
+                        @foreach (var item in ViewBag.Generos)
+                        {
+                            <option value="@item.Nome">@item.Nome</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group col-12 col-md-12">
+                    <label asp-for="Sinopse" class="control-label"></label>
+                    <textarea asp-for="Sinopse" class="form-control" cols="7" style="max-height:30px; min-height:70px;"></textarea>
+                    <span asp-validation-for="Sinopse" class="text-danger"></span>
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                    <input type="file" id="capa" name="capa" accept="image/png, image/jpeg" onchange="SelecionarCapa(); loadCapa(event);" />
+                    <label for="capa" id="textoLabelCapa">Escolher capa do livro...</label>
+                    <center>
+                        <img src="" id="imagemAlterarCapa" height="200" style="display: none;" />
+                    </center>
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                    <input type="file" id="file" accept="application/epub+zip" name="file" onchange="SelecionarArquivo();" />
+                    <label for="file" id="textoLabel">Escolher arquivo do livro...</label>
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                    <label asp-for="Isbn" class="control-label"></label>
+                    <input asp-for="Isbn" class="form-control" />
+                    <span asp-validation-for="Isbn" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Adicionar" class="btn-submit btn-center btn-style btn-adicionar" />
+            </div>
+        </form>
+        @if (ViewBag.Info != null)
+        {
+            <center>
+                <h3 style="color: white;">@ViewBag.Info</h3>
+                <button class="btn-submit btn-center btn-style btn-adicionar" onclick="window.location.href = '/Home/Livros'; ShowLoad();">Voltar para lista</button>
+            </center>
+        }
+    </div>

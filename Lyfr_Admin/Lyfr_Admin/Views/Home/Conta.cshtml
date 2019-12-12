@@ -1,0 +1,97 @@
+﻿ 
+@{
+    ViewData["Title"] = "Conta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container container-black">
+        <div class="row">
+            <div class="col-12">
+                <img src="~/img/user.png" class="img-user" />
+            </div>
+            <div class="col-12 col-lg-4 div-conta-login">
+                <h5 class="title-conta">Login: @User.Claims.ToList()[0].Value</h5>
+                <div id="BtnAlterLogin" class="btn-center btn-style btn-alter">
+                    <p>Alterar login</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 div-conta-email">
+                <h5 class="title-conta">Email: @User.Claims.ToList()[1].Value</h5>
+                <div id="BtnAlterEmail" class="btn-center btn-style btn-alter">
+                    <p>Alterar Email</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 div-conta-email">
+                <h5 class="title-conta">Senha: @User.Claims.ToList()[2].Value</h5>
+                <div id="BtnAlterSenha" class="btn-center btn-style btn-alter">
+                    <p>Alterar Senha</p>
+                </div>
+            </div>
+        </div>
+
+        <br /><br />
+        <br /><br />
+        @if (ViewBag.Info != null)
+        {
+            <center>
+                <h3 style="color: white;">@ViewBag.Info</h3>
+            </center>
+        }
+    </div>
+
+    <div class="modal fade" id="ModalAlterLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form method="post">
+                    <div class="modal-body">
+                        <p>Alterar Login</p>
+                        <input type="text" name="loginNovo" id="Login" class="form-control" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <input type="submit" class="btn btn-success" value="Alterar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalAlterEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form method="post">
+                    <div class="modal-body">
+                        <p>Alterar Email</p>
+                        <input type="text" name="emailNovo" id="Email" class="form-control" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <input type="submit" class="btn btn-success" value="Alterar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalAlterSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form method="post">
+                    <div class="modal-body">
+                        <p>Alterar Senha</p>
+                        <input type="text" name="senhaAntiga" id="Login" class="form-control" placeholder="Digite sua senha antiga..." />
+                        <br />
+                        <input type="text" name="senhaNova" id="Login" class="form-control" placeholder="Digite sua senha nova..." />
+                        <br />
+                        <input type="text" name="confirmarSenhaNova" id="Login" class="form-control" placeholder="Confirme a sua senha..." />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <input type="submit" class="btn btn-success" value="Alterar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

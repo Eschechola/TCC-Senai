@@ -1,0 +1,49 @@
+﻿@model Lyfr_Admin.Models.Entities.Genero
+@{
+    ViewData["Title"] = "AdicionarGenero";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="black-background-painel">
+        <center>
+            <div class="itens-load">
+                <div class="load">
+                </div>
+                <br>
+                <p id="loadingDots">Carregando requisição...</p>
+            </div>
+        </center>
+    </div>
+    <div class="container container-black">
+        <form asp-action="AdicionarGenero" method="post" enctype="multipart/form-data">
+            <br />
+            <h2>Adicionar novo gênero</h2>
+            <div class="row">
+                <div class="form-group col-12">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <br /><br />
+                    <input type="file" id="file" name="Foto" onchange="SelecionarArquivo(); loadFile(event);" />
+                    <label for="file" id="textoLabel" >Escolher arquivo...</label>
+                    <div class="form-group col-lg-12 col-md-12">
+                        <center>
+                            <img src="" id="imagemAlterar" width="1000" height="600" style="display: none;" />
+                        </center>
+                    </div>
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Adicionar" class="btn-submit btn-center btn-style btn-adicionar" onclick="ShowLoad()"/>
+            </div>
+        </form>
+        <br /><br />
+        <br /><br />
+        @if (ViewBag.Info != null)
+        {
+            <center>
+                <h3 style="color: white;">@ViewBag.Info</h3>
+                <button class="btn-submit btn-center btn-style btn-adicionar" onclick="window.location.href = '/Home/Generos'; ShowLoad();">Voltar para lista</button>
+            </center>
+        }
+    </div>
+

@@ -1,0 +1,50 @@
+﻿@model Lyfr_Admin.Models.Entities.Autores
+
+
+@{
+    ViewData["Title"] = "DetAutor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container container-black">
+        @if (Model != null)
+        {
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2 class="title-livro">@Model.Nome</h2>
+                    <img src="@Model.Foto" class="cover-book" />
+                </div>
+                @*<div class="col-12 col-lg-6 dados-cliente">
+                <div class="btn-style btn-center btn-delete" id="btn-delete" >
+                    <p>Excluir</p>
+                </div>
+                <div class="btn-style btn-center btn-alter" onclick="document.location.href='/Home/AlterarAutor'">
+                    <p>Alterar</p>
+                </div>*@
+            </div>
+            <div class="col-12 col-lg-6 dados-livros">
+                <h5>@Model.AnoNasc</h5>
+                <br />
+                <h5>Bio: </h5>
+                <p>@Model.Bio</p>
+            </div>
+            <div class="col-12 col-lg-6 other-dados-livros">
+                @*<h5>Data de cadastro </h5>
+                <h5> @Model.dat </h5>
+                <br />
+                <h5>Total de livros </h5>
+                <h5> 2 </h5>
+                <br />*@
+            </div>
+        }
+        else
+        {
+            <br />
+            <br />
+            <center>
+                <h3>Ocorreu algum erro. Por - favor tente novamente.</h3>
+            </center>
+        }
+    </div>
+
+        

@@ -1,0 +1,182 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Chrome -->
+    <meta name="theme-color" content="#212121">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#212121">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#212121">
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="~/img/Icon_Lyfr.png" />
+    <title>Lyfr</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="~/lib/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="~/css/Reader.css" rel="stylesheet" />
+    <link href="~/css/estilos.css" rel="stylesheet" />
+    <link href="~/css/Page_Apresentacao.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/bootstrap.js"></script>
+    <link href="~/css/browse.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container container-leitura">
+        <img src="~/img/menu_reader.png" id="img-menu" />
+        <img src="~/img/Icon_Lyfr.png" id="logo" onclick="document.location.href = '/Home/Browse'" />
+        <div class="center-modal load-white d-block" id="load-reader"></div>
+        <div class="row">
+            <div class="col-lg-9 col-12 col-leitor">
+                <div id="main">
+                    <div id="viewer"></div>
+                </div>
+            </div>
+            <div class="col-lg-3 navigation-lg">
+                <div id="navigation">
+                    <h1 class="text-white" id="title"></h1>
+                    <image id="cover" width="150px" />
+                    <h2 class="text-white" id="author"></h2>
+                    <div class="text-white" id="toc"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-sm" id="navigation-sm">
+            <img src="~/img/x.png" id="close" />
+
+            <h1 class="title-sm" id="title-sm"></h1>
+            <image id="cover-sm" width="150px" />
+            <h2 class="autor-sm" id="author-sm"></h2>
+            <div id="toc-sm"></div>
+        </div>
+    </div>
+
+    <script>
+        // Load the opf
+        var book = ePub("@ViewBag.Livro.Arquivo");
+        var rendition = book.renderTo("viewer", {
+            flow: "scrolled-doc",
+            manager: "continuous",
+            height: "90vh",
+            width: "100%"
+        });
+        var hash = window.location.hash.slice(2);
+        console.log(hash);
+        rendition.display();
+
+        var navigationSm = document.getElementById("navigation-sm");
+        var load = document.getElementById("load-reader");
+        book.loaded.navigation.then(function (toc) {
+            load.style.display = "none";
+            var $nav = document.getElementById("toc"),
+                docfrag = document.createDocumentFragment();
+            var $navsm = document.getElementById("toc-sm"),
+                docfragsm = document.createDocumentFragment();
+
+            var addTocItems = function (parent, tocItems) {
+                var $ul = document.createElement("ul");
+                tocItems.forEach(function (chapter) {
+                    var item = document.createElement("li");
+                    var link = document.createElement("a");
+                    link.textContent = chapter.label;
+                    link.href = chapter.href;
+                    item.appendChild(link);
+                    if (chapter.subitems) {
+                        addTocItems(item, chapter.subitems)
+                    }
+                    link.onclick = function () {
+                        var url = link.getAttribute("href");
+                        rendition.display(url);
+                        return false;
+                    };
+                    $ul.appendChild(item);
+                });
+                parent.appendChild($ul);
+            };
+
+            var addTocItemssm = function (parent, tocItems) {
+                var $ulsm = document.createElement("ul");
+                tocItems.forEach(function (chapter) {
+                    var itemsm = document.createElement("li");
+                    var linksm = document.createElement("a");
+                    linksm.textContent = chapter.label;
+                    linksm.href = chapter.href;
+                    itemsm.appendChild(linksm);
+                    if (chapter.subitems) {
+                        addTocItems(itemsm, chapter.subitems)
+                    }
+                    linksm.onclick = function () {
+                        var url = linksm.getAttribute("href");
+                        navigationSm.style.transform = "translate(100%)";
+                        rendition.display(url);
+                        setTimeout(setWidth0, 700);
+                        return false;
+                    };
+                    $ulsm.appendChild(itemsm);
+                });
+                parent.appendChild($ulsm);
+            };
+
+            addTocItems(docfrag, toc);
+            addTocItemssm(docfragsm, toc);
+            $nav.appendChild(docfrag);
+            $navsm.appendChild(docfragsm);
+
+        });
+
+        book.loaded.metadata.then(function (meta) {
+            var $title = document.getElementById("title");
+            var $titlesm = document.getElementById("title-sm");
+            var $author = document.getElementById("author");
+            var $authorsm = document.getElementById("author-sm");
+            var $cover = document.getElementById("cover");
+            var $coversm = document.getElementById("cover-sm");
+            $title.innerHTML = "@ViewBag.Livro.Titulo";
+            $titlesm.innerHTML = "@ViewBag.Livro.Titulo";
+            $author.textContent = meta.creator;
+            $authorsm.textContent = meta.creator;
+            $cover.src = "@ViewBag.Livro.Capa";
+            $coversm.src = "@ViewBag.Livro.Capa";
+        });
+
+        var btnmenu = document.getElementById("img-menu");
+        var btnclose = document.getElementById("close");
+
+
+        btnmenu.addEventListener("click", function () {
+            navigationSm.style.transform = "translate(0px)";
+            navigationSm.style.width = "100vw";
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+        });
+
+        btnclose.addEventListener("click", function () {
+            navigationSm.style.transform = "translate(100%)";
+            setTimeout(setWidth0, 700);
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+        });
+
+        function setWidth0() {
+            navigationSm.style.width = "0px";
+        }
+
+    </script>
+
+</body>
+</html>

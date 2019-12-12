@@ -1,0 +1,13 @@
+﻿footer {
+    height: 80px;
+    background-color: #1f1e1e;
+    width: 100vw;
+}
+
+footer h3 {
+    color: white;
+    text-align: center;
+    line-height: 62px;
+    font-size: 15px;
+    transform: translateY(20%);
+}
