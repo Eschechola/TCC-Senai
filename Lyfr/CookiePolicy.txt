@@ -1,0 +1,104 @@
+﻿<h1>Política de Privacidade</h1>
+
+
+<p>Data efetiva: 30 de outubro de 2019</p>
+
+
+<p>Lyfr opera o site http://lyfr.com.br/.</p>
+
+<p>Esta página informa sobre nossas políticas sobre a coleta, uso e divulgação de dados pessoais quando você usa nosso Serviço e as opções que você associou a esses dados.</p>
+
+<p>Usamos seus dados para fornecer e melhorar o Serviço. Ao usar o Serviço, você concorda com a coleta e o uso de informações de acordo com esta política. Salvo disposição em contrário nesta Política de Privacidade, os termos usados nesta Política de Privacidade têm os mesmos significados que em nossos Termos e Condições, acessíveis em http://lyfr.com.br/</p>
+
+
+<h2>Coleta e uso de informações</h2>
+
+<p>Coletamos vários tipos diferentes de informações para vários propósitos, a fim de fornecer e melhorar nosso Serviço para você.</p>
+
+<h3>Tipos de dados coletados</h3>
+
+<h4>Dados pessoais</h4>
+
+<p>Ao usar nosso Serviço, podemos solicitar que você nos forneça certas informações de identificação pessoal que podem ser usadas para entrar em contato ou identificá-lo ("Dados Pessoais"). Informações de identificação pessoal podem incluir, mas não estão limitadas a:</p>
+
+<ul>
+<li>Endereço de e-mail</li><li>Nome e sobrenoms</li><li>Número de telefone</li><li>Endereço, Estado, Província, CEP, Cidade</li><li>Cookies e dados de uso</li>
+</ul>
+
+<h4>Dados de uso</h4>
+
+<p>Também podemos coletar informações sobre como o Serviço é acessado e usado ("Dados de Uso"). Estes Dados de Uso podem incluir informações como o endereço de Protocolo da Internet do seu computador (por exemplo, endereço IP), tipo de navegador, versão do navegador, as páginas do nosso Serviço que você visita, a hora e a data da sua visita, o tempo gasto nessas páginas, exclusivo identificadores de dispositivo e outros dados de diagnóstico.</p>
+
+<h4>Dados de rastreamento e cookies</h4>
+<p>Utilizamos cookies e tecnologias de rastreamento semelhantes para rastrear a atividade em nosso Serviço e reter determinadas informações.</p>
+<p>Cookies são arquivos com pequena quantidade de dados que podem incluir um identificador exclusivo anônimo. Os cookies são enviados para o seu navegador a partir de um site e armazenados no seu dispositivo. As tecnologias de rastreamento também usadas são beacons, tags e scripts para coletar e rastrear informações e melhorar e analisar nosso Serviço.</p>
+<p>Você pode instruir seu navegador a recusar todos os cookies ou a indicar quando um cookie está sendo enviado. No entanto, se você não aceitar cookies, poderá não conseguir usar algumas partes do nosso Serviço.</p>
+<p>Exemplos de cookies que usamos:</p>
+<ul>
+    <li><strong>Cookies de sessão.</strong> Utilizamos Cookies de Sessão para operar nosso Serviço.</li>
+    <li><strong>Cookies de preferência.</strong> Usamos Cookies de preferência para lembrar suas preferências e várias configurações.</li>
+    <li><strong>Cookies de segurança.</strong> Utilizamos cookies de segurança para fins de segurança.</li>
+</ul>
+
+<h2>Uso de dados</h2>
+    
+<p>Lyfr usa os dados coletados para vários propósitos:</p>    
+<ul>
+    <li> Para fornecer e manter o Serviço </li>
+     <li> Para notificá-lo sobre alterações em nosso Serviço </li>
+     <li> Para permitir que você participe de recursos interativos do nosso Serviço quando você optar por fazê-lo </li>
+     <li> Para fornecer atendimento e suporte ao cliente </li>
+     <li> Fornecer análises ou informações valiosas para que possamos melhorar o Serviço </li>
+     <li> Para monitorar o uso do Serviço </li>
+     <li> Para detectar, prevenir e resolver problemas técnicos </li>
+</ul>
+
+<h2> Transferência de dados </h2>
+<p> Suas informações, incluindo dados pessoais, podem ser transferidas para - e mantidas em - computadores localizados fora do seu estado, província, país ou outra jurisdição governamental em que as leis de proteção de dados possam diferir daquelas da sua jurisdição. </p>
+<p> Se você estiver fora do Brasil e optar por nos fornecer informações, observe que transferimos os dados, incluindo Dados Pessoais, para o Brasil e os processamos lá. </p>
+<p> Seu consentimento para esta Política de Privacidade, seguido pelo envio de tais informações, representa seu acordo com essa transferência. </p>
+<p> Lyfr tomará todas as medidas razoavelmente necessárias para garantir que seus dados sejam tratados com segurança e de acordo com esta Política de Privacidade e que nenhuma transferência de seus Dados Pessoais ocorra para uma organização ou país, a menos que haja controles adequados, incluindo o segurança de seus dados e outras informações pessoais. </p>
+
+<h2> Divulgação de dados </h2>
+
+<h3> Requisitos legais </h3>
+<p> Lyfr pode divulgar seus Dados Pessoais de boa fé, acreditando que tal ação é necessária para: </p>
+<ul>
+     <li> Para cumprir uma obrigação legal </li>
+     <li> Proteger e defender os direitos ou propriedades da Lyfr </li>
+     <li> Para impedir ou investigar possíveis irregularidades relacionadas ao Serviço </li>
+     <li> Para proteger a segurança pessoal dos usuários do Serviço ou do público </li>
+     <li> Para proteger contra a responsabilidade legal </li>
+</ul>
+
+<h2> Segurança dos dados </h2>
+<p> A segurança dos seus dados é importante para nós, mas lembre-se de que nenhum método de transmissão pela Internet ou método de armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis ​​para proteger seus dados pessoais, não podemos garantir sua segurança absoluta. </p>
+
+<h2> Provedores de serviços </h2>
+<p> Podemos empregar empresas e indivíduos de terceiros para facilitar nosso Serviço ("Provedores de Serviço"), prestar o Serviço em nosso nome, executar serviços relacionados ao Serviço ou para nos ajudar a analisar como nosso Serviço é usado. </ p>
+<p> Esses terceiros têm acesso aos seus Dados Pessoais apenas para executar essas tarefas em nosso nome e são obrigados a não divulgá-los ou usá-los para outros fins. </p>
+
+
+
+<h2> Links para outros sites </h2>
+<p> Nosso serviço pode conter links para outros sites que não são operados por nós. Se você clicar em um link de terceiros, será direcionado para o site desse terceiro. Aconselhamos vivamente que reveja a Política de Privacidade de todos os sites que visita. </p>
+<p> Não temos controle e não assumimos responsabilidade pelo conteúdo, políticas ou práticas de privacidade de sites ou serviços de terceiros. </p>
+
+
+<h2> Privacidade das crianças </h2>
+<p> Nosso serviço não trata ninguém com menos de 18 anos ("Filhos"). </p>
+<p> Não coletamos intencionalmente informações de identificação pessoal de menores de 18 anos. Se você é pai ou responsável e sabe que seus filhos nos forneceram Dados Pessoais, entre em contato conosco. Se tomarmos conhecimento de que coletamos Dados Pessoais de crianças sem verificação do consentimento dos pais, tomamos medidas para remover essas informações de nossos servidores. </p>
+
+
+<h2> Alterações nesta política de privacidade </h2>
+<p> Podemos atualizar nossa Política de Privacidade periodicamente. Notificaremos você sobre qualquer alteração postando a nova Política de Privacidade nesta página. </p>
+<p> Informaremos você por e-mail e / ou um aviso importante em nosso Serviço, antes que a alteração entre em vigor e atualize a "data efetiva" na parte superior desta Política de Privacidade. </p>
+<p> Aconselhamos que você reveja esta Política de Privacidade periodicamente para quaisquer alterações. As alterações nesta Política de Privacidade são efetivas quando publicadas nesta página. </p>
+
+
+<h2> Entre em contato </h2>
+<p> Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco: </p>
+<ul>
+        <li> Por email: contato.lyfr@gmail.com </li>
+          
+        </ul>
